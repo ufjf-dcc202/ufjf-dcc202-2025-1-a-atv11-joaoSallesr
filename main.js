@@ -7,9 +7,13 @@ const pEntrada = document.querySelector("#entrada");
 const btnAdicionar = document.querySelector("#adicionar");
 const btnLimpar = document.querySelector("#limpar");
 
-btnLimpar.addEventListener("click", limpaItensDaLista);
+btnLimpar.addEventListener("click", limparItensDaLista);
+btnAdicionar.addEventListener("click", criaItem);
 
-function limpaItensDaLista() {
+function criaItem(){
+    
+}
+function limparItensDaLista(){
     limpaLista();
     atualizaLista();
 }
