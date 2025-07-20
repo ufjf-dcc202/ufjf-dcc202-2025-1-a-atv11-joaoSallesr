@@ -1,14 +1,17 @@
 //main.js
 
-import { adicionaLista, getLista, limpaLista } from "./lista.js";
+import { adicionaNaLista, getLista, limpaLista, removeDaLista } from "./lista.js";
 
 const olItens = document.querySelector("#itens");
 const pEntrada = document.querySelector("#entrada");
 const btnAdicionar = document.querySelector("#adicionar");
 const btnLimpar = document.querySelector("#limpar");
+const btnRemove = document.querySelector("#remover");
 
 btnLimpar.addEventListener("click", limparItensDaLista);
-btnAdicionar.addEventListener("click", adicionaNaLista);
+btnAdicionar.addEventListener("click", adicionaLista);
+btnRemove.addEventListener("click", removeLista);
+
 atualizaLista();
 
 function limparItensDaLista(){
@@ -16,8 +19,13 @@ function limparItensDaLista(){
     atualizaLista();
 }
 
-function adicionaNaLista(){
-    adicionaLista(pEntrada);
+function adicionaLista(){
+    adicionaNaLista(pEntrada);
+    atualizaLista();
+}
+
+function removeLista(){
+    removeDaLista(pEntrada);
     atualizaLista();
 }
 
